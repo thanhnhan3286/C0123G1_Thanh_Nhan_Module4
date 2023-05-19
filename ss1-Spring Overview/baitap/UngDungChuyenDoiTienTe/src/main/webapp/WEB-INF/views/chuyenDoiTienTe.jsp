@@ -49,7 +49,8 @@
         <div class="form-outline mb-4">
             <label for="customerName">Nhap So Tien</label>
             <p>
-                <input style="text-align: center; border: 1px solid black; border-radius: 3px" name="usd" id="customerName"
+                <input style="text-align: center; border: 1px solid black; border-radius: 3px" name="usd"
+                       id="customerName"
                        type="number" value="${usd}"/>
             </p>
         </div>
@@ -75,5 +76,6 @@
     </form>
     <h2>${result} VND</h2>
 </div>
+
 </body>
 </html>

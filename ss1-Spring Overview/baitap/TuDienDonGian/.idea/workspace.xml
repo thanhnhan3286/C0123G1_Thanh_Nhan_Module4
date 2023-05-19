@@ -5,40 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18161aa0-2529-46fa-80c4-65ab7bc9c095" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tudiendongian/controller/TuDienDonGian.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tudiendongian/repository/ITuDienRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tudiendongian/repository/Impl/TuDienRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tudiendongian/service/ITuDienService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/tudiendongian/service/Impl/TuDienService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/tuDien.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/src/main/java/com/example/ungdungchuyendoitiente/controller/ChuyenDoiTienTe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/src/main/java/com/example/ungdungchuyendoitiente/service/IChuyenDoiTienTeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/src/main/java/com/example/ungdungchuyendoitiente/service/Impl/ChuyenDoiTienTeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/src/main/webapp/WEB-INF/views/chuyenDoiTienTe.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../customer-management" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/src/main/java/com/example/hienthigiavivoisandwich/controller/SandwichCondiments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/src/main/webapp/WEB-INF/views/sandwichCondiments.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2-Spring Controller/baitap/HienThiGiaViVoiSandwich/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tudiendongian/repository/Impl/TuDienRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tudiendongian/repository/Impl/TuDienRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/src/main/webapp/WEB-INF/views/chuyenDoiTienTe.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../UngDungChuyenDoiTienTe/src/main/webapp/WEB-INF/views/chuyenDoiTienTe.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../customer-management" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,11 +100,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Codegym/module4/C0123G1_Thanh_Nhan_Module4/ss1-Spring Overview/baitap/TuDienDonGian/src/main/webapp/WEB-INF",
+    "last_opened_file_path": "D:/Codegym/module4/C0123G1_Thanh_Nhan_Module4/ss1-Spring Overview/baitap/TuDienDonGian",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "7ac4bd3233ec4c7c66d0944b631a62d3",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -222,7 +212,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684397800939</updated>
-      <workItem from="1684397802094" duration="3283000" />
+      <workItem from="1684397802094" duration="4217000" />
+      <workItem from="1684468778074" duration="1095000" />
     </task>
     <servers />
   </component>

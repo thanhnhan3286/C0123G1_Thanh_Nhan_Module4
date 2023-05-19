@@ -21,12 +21,6 @@ public class TuDienRepository implements ITuDienRepository {
 
     @Override
     public Map<String,String> dich(String english) {
-//        String result = "Không dịch được";
-//        for (Map.Entry<String, String> m : mapList.entrySet()) {
-//            if (m.getKey().equals(english)){
-//                result = m.getValue();
-//            }
-//        }
         return mapList;
     }
 }
