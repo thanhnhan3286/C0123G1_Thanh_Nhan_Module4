@@ -71,14 +71,14 @@
                 </div>
             </div>
         </form>
-        <h3>RESULT: <c:if test="${result1 == 'Not exist!!!'}">
-
-            ${result1}
-        </c:if>
+        <h3>RESULT:
+            <c:if test="${result1 == 'Not exist!!!'}">
+                ${result1}
+            </c:if>
             <c:if test="${result1 == null}">
                 ${result}
             </c:if></h3>
-
     </div>
+</div>
 </body>
 </html>
