@@ -24,6 +24,7 @@ public class Calculator {
     public String calculator(Model model, @RequestParam(value = "math", defaultValue = "add") String math, @RequestParam(value = "num1", defaultValue = "0") double num1,
                              @RequestParam(value = "num2", defaultValue = "0") double num2) {
         double result;
+        String result1 = null;
         switch (math) {
             case "sub":
                 result = iCalculatorService.subtraction(num1, num2);
@@ -34,11 +35,14 @@ public class Calculator {
             case "div":
                 result = iCalculatorService.division(num1, num2);
                 break;
-            default:
+            case "add":
                 result = iCalculatorService.addition(num1, num2);
                 break;
+            default:
+                result = 0;
+                result1 = "Not exist!!!";
+                break;
         }
-        String result1 = null;
         if (Objects.equals(math, "div") && num2 == 0) {
             result1 = "Not exist!!!";
         }

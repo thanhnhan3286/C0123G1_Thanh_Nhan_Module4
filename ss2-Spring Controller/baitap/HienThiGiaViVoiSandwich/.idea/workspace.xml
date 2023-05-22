@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5795d23-cac8-4e22-9cb0-9117a35162f7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1-Spring Overview/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1-Spring Overview/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MayTinhCaNhan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MayTinhCaNhan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MayTinhCaNhan/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../MayTinhCaNhan/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +79,7 @@
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "2132721c993f28e9a205346cf7a781d2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -177,7 +185,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684465735231</updated>
-      <workItem from="1684465736816" duration="9610000" />
+      <workItem from="1684465736816" duration="9612000" />
+      <workItem from="1684728364110" duration="379000" />
     </task>
     <servers />
   </component>
