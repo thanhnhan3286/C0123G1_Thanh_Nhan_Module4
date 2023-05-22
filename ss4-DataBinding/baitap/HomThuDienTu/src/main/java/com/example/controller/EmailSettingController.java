@@ -15,11 +15,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class EmailSettingController {
     @Autowired
     private IEmailSettingService iEmailSettingService;
-//    @GetMapping("/")
-//    public String home(){
-//        return "index";
-//    }
     @GetMapping("/")
+    public String home(){
+        return "index";
+    }
+    @GetMapping("/setting")
     public String setting (Model model){
         String[] languages = {"English","Vietnamese","Japanese","Chinese"};
         Integer[] pageSizes = {5,10,15,20,25,50,100};
