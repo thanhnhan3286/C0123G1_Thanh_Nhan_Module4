@@ -16,8 +16,8 @@ static EmailSettings emailSettings = new EmailSettings("Vietnamese",20,true,"Ngh
     @Override
     public void save(EmailSettings emailSetting) {
         emailSettings.setLanguage(emailSetting.getLanguage());
-        emailSettings.setLanguage(String.valueOf(emailSetting.getPageSize()));
-        emailSettings.setLanguage(String.valueOf(emailSetting.getSpamsFilter()));
-        emailSettings.setLanguage(emailSetting.getSignature());
+        emailSettings.setPageSize(emailSetting.getPageSize());
+        emailSettings.setSpamsFilter(emailSetting.getSpamsFilter());
+        emailSettings.setSignature(emailSetting.getSignature());
     }
 }

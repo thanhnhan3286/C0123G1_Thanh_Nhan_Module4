@@ -38,13 +38,9 @@
             <table>
                 <tr>
                     <th>Languages</th>
-                    <td><form:select path="language" items="${languages}"/>
-                        <select name="language" id="language">
-                            <option value="English">English</option>
-                            <option value="Vietnamese">Vietnamese</option>
-                            <option value="Japanese">Japanese</option>
-                            <option value="Chinese">Chinese</option>
-                        </select>
+                    <td>
+                        <form:select path="language" items="${languages}"/>
+<%--                        <form:options />--%>
                     </td>
                 </tr>
                 <tr></tr>
@@ -55,22 +51,12 @@
                     <td>
                         <span>Show</span>
                         <span>
-    <select>
-    <option value="5">5</option>
-    <option value="5">10</option>
-    <option value="5">15</option>
-    <option value="5">20</option>
-    </select>
-    </span>
+                            <form:select path="pageSize" items="${pageSize}"/>
+<%--                            <form:options />--%>
+                        </span>
                         <span>
     email per page
     </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td hidden>
-                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                        Enable spams filter
                     </td>
                 </tr>
                 <tr>
@@ -99,7 +85,7 @@
                     <td>
                         <div style="display: flex">
                             <div>
-                                <button>Update</button>
+                                <button type="submit">Update</button>
                             </div>
                             <div style="margin-left: 20%">
                                 <button>Cancel</button>
@@ -111,62 +97,5 @@
         </form:form>
     </div>
 </div>
-<%--    <div style="display: inline-block">--%>
-<%--    <fieldset>--%>
-<%--&lt;%&ndash;    <form:form action="update" method="post" modelAttribute="emailSettings">&ndash;%&gt;--%>
-<%--        <table>--%>
-<%--            <tr>--%>
-<%--                <td><b>Languages</b></td>--%>
-<%--                <td>--%>
-<%--&lt;%&ndash;                    <form:select path="language" items="${languages}"/>&ndash;%&gt;--%>
-
-<%--                </td>--%>
-<%--            </tr>--%>
-
-<%--            <tr>--%>
-<%--                <td>--%>
-<%--                    <b>Page size:</b>--%>
-<%--                </td>--%>
-<%--                <td>--%>
-<%--                    Show--%>
-<%--                    <form:select path="pageSize" items="${pageSize}"/>--%>
-<%--                    emails per page--%>
-<%--                </td>--%>
-<%--            </tr>--%>
-
-<%--            <tr>--%>
-<%--                <td>--%>
-<%--                    <b>Spams filter:</b>--%>
-<%--                </td>--%>
-<%--                <td>--%>
-<%--&lt;%&ndash;                    <form:checkbox path="spamsFilter"/> Enable spam filter&ndash;%&gt;--%>
-<%--                </td>--%>
-<%--            </tr>--%>
-
-<%--            <tr>--%>
-<%--                <td><b>Signature</b></td>--%>
-<%--                <td>--%>
-<%--&lt;%&ndash;                    <form:textarea path="signature"/>&ndash;%&gt;--%>
-<%--                </td>--%>
-<%--            </tr>--%>
-
-<%--            <tr>--%>
-<%--                <td></td>--%>
-<%--                <td>--%>
-<%--                    <button type="submit">Update</button>--%>
-<%--                    <button type="reset">Cancel</button>--%>
-<%--                </td>--%>
-<%--            </tr>--%>
-
-
-<%--        </table>--%>
-
-
-<%--&lt;%&ndash;    </form:form>&ndash;%&gt;--%>
-
-<%--    </fieldset>--%>
-
-
-<%--    </div>--%>
 </body>
 </html>
