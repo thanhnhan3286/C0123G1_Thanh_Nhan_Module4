@@ -5,16 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5795d23-cac8-4e22-9cb0-9117a35162f7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/src/main/java/com/example/homthudientu/controller/EmailSettingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/src/main/java/com/example/homthudientu/model/EmailSettings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/src/main/java/com/example/homthudientu/repository/IEmailSettingsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/src/main/java/com/example/homthudientu/repository/impl/EmailSettingRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/src/main/java/com/example/homthudientu/service/IEmailSettingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/src/main/java/com/example/homthudientu/service/impl/EmailSettingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/src/main/webapp/WEB-INF/views/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/src/main/webapp/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/src/main/webapp/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/baitap/HomThuDienTu/src/main/webapp/web.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/.idea/gradle.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss4-DataBinding/thuchanh/bai1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1-Spring Overview/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1-Spring Overview/customer-management" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MayTinhCaNhan/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MayTinhCaNhan/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MayTinhCaNhan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MayTinhCaNhan/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +91,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Codegym/module3/Gaming-Lap",
+    "last_opened_file_path": "D:/Codegym/module4/C0123G1_Thanh_Nhan_Module4/ss2-Spring Controller/baitap/MayTinhCaNhan",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -186,7 +206,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684465735231</updated>
       <workItem from="1684465736816" duration="9612000" />
-      <workItem from="1684728364110" duration="379000" />
+      <workItem from="1684728364110" duration="5805000" />
     </task>
     <servers />
   </component>
