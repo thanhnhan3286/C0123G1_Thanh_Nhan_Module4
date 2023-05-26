@@ -14,7 +14,7 @@ public class BlogServiceImpl implements IBlogService {
     private IBlogRepository blogRepository;
     @Override
     public List<Blog> getAll() {
-        return blogRepository.findAll();
+        return blogRepository.findAllByStatusIsFalse();
     }
 
     @Override
@@ -29,7 +29,7 @@ public class BlogServiceImpl implements IBlogService {
 
     @Override
     public void delete(int deleteId) {
-        this.blogRepository.delete(blogRepository.getById(deleteId));
+        this.blogRepository.setStatus(deleteId);
     }
 
     @Override

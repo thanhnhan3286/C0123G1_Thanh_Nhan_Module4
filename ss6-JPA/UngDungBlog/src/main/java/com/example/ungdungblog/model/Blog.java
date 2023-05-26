@@ -27,7 +27,28 @@ public class Blog {
     @Column(columnDefinition = "TIMESTAMP DEFAULT now()")
     @UpdateTimestamp
     private Date updateTime;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+    @Column(columnDefinition = "BIT DEFAULT 0")
+    private boolean status;
     public Blog() {
+    }
+
+    public boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public Blog(Integer id, String title, String content, String author, Date createTime, Date updateTime) {
@@ -39,10 +60,17 @@ public class Blog {
         this.updateTime = updateTime;
     }
 
-    public Blog(String title, String content, String author) {
+    public Blog(String title, String content, String author ) {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public Blog(String title, String content, String author, Category category) {
+        this.title = title;
+        this.content = content;
+        this.author = author;
+        this.category = category;
     }
 
     public Integer getId() {

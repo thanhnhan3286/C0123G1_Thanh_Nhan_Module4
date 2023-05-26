@@ -18,6 +18,13 @@
                     </button>
                 </a>
             </div>
+            <div>
+                <a th:href="@{/categoryList}">
+                    <button class="btn" style="border: 1px solid #DDDDDD; background-color: green; color: white">
+                        List Category
+                    </button>
+                </a>
+            </div>
         </div>
         <div style="display: flex">
             <form class="d-flex" th:action="@{/search}" method="post">
@@ -45,6 +52,7 @@
                 <th scope="col">Title</th>
                 <!--        <th scope="col">Image</th>-->
                 <th scope="col">Author</th>
+                <th scope="col">Category</th>
                 <th scope="col">Create Time</th>
 <!--                <th scope="col">Update Time</th>-->
                 <th scope="col">Edit</th>
@@ -58,6 +66,7 @@
                 <td th:text="${row.id}"></td>
                 <td th:text="${row.title}"></td>
                 <td th:text="${row.author}"></td>
+                <td th:text="${row.category.name}"></td>
                 <td th:text="${row.createTime}"></td>
 <!--                <td th:text="${row.updateTime}"></td>-->
                 <td>

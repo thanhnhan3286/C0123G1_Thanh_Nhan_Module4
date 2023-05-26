@@ -56,10 +56,6 @@
             <div class="row" style="height: auto; text-align: center; padding-bottom: 30px; margin-top: 5%">
                 <h1>Blog Information</h1>
             </div>
-            <!--            <div style="background-color: white" class="col-lg-6 col-md-12">-->
-            <!--                <img width="100%" src="${image}" class="rounded float-start" alt="...">-->
-            <!--            </div>-->
-            <!--            <div style="background-color: white" class="col-lg-6 col-md-12">-->
             <div th:object="${blog}">
                 <div style="height: auto;text-align: center" class="row">
                     <h2 th:text="${blog.title}"></h2>
@@ -74,6 +70,10 @@
                         <tr>
                             <th>Author</th>
                             <th th:text="${blog.author}"></th>
+                        </tr>
+                        <tr>
+                            <th>Category</th>
+                            <th th:text="${blog.category.name}"></th>
                         </tr>
                         <tr>
                             <th>Create Time</th>

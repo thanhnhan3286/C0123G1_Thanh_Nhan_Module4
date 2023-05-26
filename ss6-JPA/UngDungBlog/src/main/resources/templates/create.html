@@ -82,8 +82,17 @@
             <label class="form-label" for="form6Example4">Author</label>
         </div>
         <div class="form-outline mb-4">
+            <select style="border: 1px solid #CCCCCC; text-align: center" name="category" id="form6Example5" th:field="*{category}" class="form-control">
+                <option th:each="category: ${categorys}"
+                        th:text="${category.name}"
+                        th:value="${category.id}">
+                </option>
+            </select>
+            <label class="form-label" for="form6Example5">Category</label>
+        </div>
+        <div class="form-outline mb-4">
       <textarea name="content" class="form-control" id="form6Example7" rows="4"
-                style="border-radius: 5px; border: 1px solid grey" th:field="*{content}"></textarea>
+                style="border-radius: 5px; border: 1px solid #CCCCCC" th:field="*{content}"></textarea>
             <label class="form-label" for="form6Example7">Contents</label>
         </div>
         <button type="submit" class="btn btn-dark btn-block mb-4 ">Create</button>
