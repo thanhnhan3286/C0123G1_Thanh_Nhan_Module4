@@ -50,29 +50,46 @@
 <h1 style="text-align: center;margin-top:50px ">ADD NEW SONG</h1>
 <div class="col-lg-2 col-sm-1"></div>
 <div class="col-lg-8 col-sm-10 " id="add">
-    <form th:action="@{/create}" method="post" class="text_left" th:object="${blog}">
+    <form th:action="@{/create}" method="post" class="text_left" th:object="${songDTO}">
         <div class="form-outline mb-4">
-            <input name="title" type="text" id="form6Example3" class="form-control" required th:field="*{title}"/>
-            <label class="form-label" for="form6Example3">Title</label>
+            <input name="name" type="text" id="form6Example3" class="form-control" th:field="*{name}"/>
+            <label class="form-label" for="form6Example3">Name</label>
+            <p style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
         </div>
         <div class="form-outline mb-4">
-            <input name="author" type="text" id="form6Example4" class="form-control" required th:field="*{author}"/>
+            <input name="author" type="text" id="form6Example4" class="form-control" th:field="*{author}"/>
             <label class="form-label" for="form6Example4">Author</label>
+            <p style="color: red" th:if="${#fields.hasErrors('author')}" th:errors="*{author}"></p>
+
         </div>
         <div class="form-outline mb-4">
-            <select style="border: 1px solid #CCCCCC; text-align: center" name="category" id="form6Example5" th:field="*{category}" class="form-control">
-                <option th:each="category: ${categorys}"
-                        th:text="${category.name}"
-                        th:value="${category.id}">
-                </option>
-            </select>
-            <label class="form-label" for="form6Example5">Category</label>
+            <input name="singer" type="text" id="form6Example2" class="form-control" th:field="*{singer}"/>
+            <label class="form-label" for="form6Example2">Singer</label>
+            <p style="color: red" th:if="${#fields.hasErrors('singer')}" th:errors="*{singer}"></p>
+
         </div>
         <div class="form-outline mb-4">
-      <textarea name="content" class="form-control" id="form6Example7" rows="4"
-                style="border-radius: 5px; border: 1px solid #CCCCCC" th:field="*{content}"></textarea>
-            <label class="form-label" for="form6Example7">Contents</label>
+            <input name="type" type="text" id="form6Example1" class="form-control" th:field="*{type}"/>
+            <label class="form-label" for="form6Example1">Type</label>
+            <p style="color: red" th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></p>
+
         </div>
+<!--        <div class="form-outline mb-4">-->
+<!--            <select style="border: 1px solid #CCCCCC; text-align: center" name="category" id="form6Example5" th:field="*{category}" class="form-control">-->
+<!--                <option th:each="category: ${categorys}"-->
+<!--                        th:text="${category.name}"-->
+<!--                        th:value="${category.id}">-->
+<!--                </option>-->
+<!--            </select>-->
+<!--            <label class="form-label" for="form6Example5">Category</label>-->
+<!--        </div>-->
+<!--        <div class="form-outline mb-4">-->
+<!--            <textarea name="content" class="form-control" id="form6Example7" rows="4"-->
+<!--                style="border-radius: 5px; border: 1px solid #CCCCCC" th:field="*{content}">-->
+<!--          -->
+<!--            </textarea>-->
+<!--            <label class="form-label" for="form6Example7">Contents</label>-->
+<!--        </div>-->
         <button type="submit" class="btn btn-dark btn-block mb-4 ">Create</button>
     </form>
 </div>

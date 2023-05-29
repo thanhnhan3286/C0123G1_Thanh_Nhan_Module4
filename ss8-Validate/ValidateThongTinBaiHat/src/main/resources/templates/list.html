@@ -14,84 +14,85 @@
             <div>
                 <a th:href="@{/create}">
                     <button class="btn" style="border: 1px solid #DDDDDD; background-color: green; color: white">
-                        Add New Blog
+                        Add New Song
                     </button>
                 </a>
             </div>
-            <div>
-                <a th:href="@{/categoryList}">
-                    <button class="btn" style="border: 1px solid #DDDDDD; background-color: green; color: white">
-                        List Category
-                    </button>
-                </a>
-            </div>
+<!--            <div>-->
+<!--                <a th:href="@{/categoryList}">-->
+<!--                    <button class="btn" style="border: 1px solid #DDDDDD; background-color: green; color: white">-->
+<!--                        List Category-->
+<!--                    </button>-->
+<!--                </a>-->
+<!--            </div>-->
         </div>
-        <div style="display: flex">
-            <form class="d-flex" th:action="@{/search}" method="post">
-                <input style="width: 12vw" class="form-control me-2" type="search" name="title" th:value="${title}"
-                       placeholder="Title Blog" aria-label="Search">
-                <button class="btn btn-primary" type="submit" style=" color: white">Search</button>
-            </form>
-            <a th:href="@{/}">
-                <button class="btn" style="border: 1px solid #DDDDDD; background-color: green; color: white">
-                    Reset
-                </button>
-            </a>
-        </div>
+<!--        <div style="display: flex">-->
+<!--            <form class="d-flex" th:action="@{/search}" method="post">-->
+<!--                <input style="width: 12vw" class="form-control me-2" type="search" name="title" th:value="${title}"-->
+<!--                       placeholder="Title Blog" aria-label="Search">-->
+<!--                <button class="btn btn-primary" type="submit" style=" color: white">Search</button>-->
+<!--            </form>-->
+<!--            <a th:href="@{/}">-->
+<!--                <button class="btn" style="border: 1px solid #DDDDDD; background-color: green; color: white">-->
+<!--                    Reset-->
+<!--                </button>-->
+<!--            </a>-->
+<!--        </div>-->
     </div>
 </nav>
-<h3 style="text-align: center">Blog List</h3>
+<h3 style="text-align: center">Song List</h3>
 <div style="margin: 0 auto; width: 90%; height: auto">
     <table id="product" class="table table-striped">
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Code Blog</th>
-            <th scope="col">Title</th>
+            <th scope="col">Code Song</th>
+            <th scope="col">Name</th>
             <th scope="col">Author</th>
-            <th scope="col">Category</th>
-            <th scope="col">Create Time</th>
+            <th scope="col">Singer</th>
+            <th scope="col">Type</th>
             <th scope="col">Edit</th>
-            <th scope="col">Delete</th>
-            <th scope="col">Detail</th>
+<!--            <th scope="col">Delete</th>-->
+<!--            <th scope="col">Detail</th>-->
         </tr>
         </thead>
         <tbody>
-        <tr th:each="row,rowStat : ${blogList}">
+        <tr th:each="row,rowStat : ${listSong}">
             <td th:text="${rowStat.count}"></td>
             <td th:text="${row.getId()}"></td>
-            <td th:text="${row.title}"></td>
+            <td th:text="${row.name}"></td>
             <td th:text="${row.author}"></td>
-            <td th:text="${row.category.name}"></td>
-            <td th:text="${row.createTime}"></td>
+            <td th:text="${row.singer}"></td>
+            <td th:text="${row.type}"></td>
+<!--            <td th:text="${row.createTime}"></td>-->
             <td>
                 <a th:href="@{/{id}/edit(id=${row.getId()})}">
                     <button type="button" data-bs-toggle="modal" class="btn btn-warning">edit</button>
                 </a>
             </td>
-            <td>
-                <button type="button" data-bs-toggle="modal" class="btn btn-danger"
-                        data-bs-target="#deleteModal" th:attr="onclick=|infoDelete(${row.id},'${row.title}')|">
-                    delete
-                </button>
-            </td>
-            <td>
-                <a th:href="@{/{id}/detail(id=${row.getId()})}">
-                    <button type="button" data-bs-toggle="modal" class="btn btn-primary">detail</button>
-                </a>
-            </td>
+<!--            <td>-->
+<!--                <button type="button" data-bs-toggle="modal" class="btn btn-danger"-->
+<!--                        data-bs-target="#deleteModal" th:attr="onclick=|infoDelete(${row.id},'${row.title}')|">-->
+<!--                    delete-->
+<!--                </button>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <a th:href="@{/{id}/detail(id=${row.getId()})}">-->
+<!--                    <button type="button" data-bs-toggle="modal" class="btn btn-primary">detail</button>-->
+<!--                </a>-->
+<!--            </td>-->
         </tr>
         </tbody>
     </table>
 </div>
-<div>
-    <a th:href="@{/(page = ${blogList.number - 1})}" th:if="${blogList.hasPrevious()}"> <span>Before</span> </a>
-    <span th:each="pageNo : ${#numbers.sequence(0,blogList.getTotalPages()-1)}">
-            <a th:text="${pageNo}" th:href="@{/(page=${pageNo})}" class="btn"
-               style="height: 35px;width: 40px;border: 1px solid black;color: black;background-color: white"></a>
-        </span>
-    <a th:href="@{/(page = ${blogList.number +1})}" th:if="${blogList.hasNext()}" > <span>Next</span> </a>
-</div>
+<!--<div>-->
+<!--    <a th:href="@{/(page = ${blogList.number - 1})}" th:if="${blogList.hasPrevious()}"> <span>Before</span> </a>-->
+<!--    <span th:each="pageNo : ${#numbers.sequence(0,blogList.getTotalPages()-1)}">-->
+<!--            <a th:text="${pageNo}" th:href="@{/(page=${pageNo})}" class="btn"-->
+<!--               style="height: 35px;width: 40px;border: 1px solid black;color: black;background-color: white"></a>-->
+<!--        </span>-->
+<!--    <a th:href="@{/(page = ${blogList.number +1})}" th:if="${blogList.hasNext()}" > <span>Next</span> </a>-->
+<!--</div>-->
 
 <footer th:replace="/layout :: footer"></footer>
 <!-- Modal -->
