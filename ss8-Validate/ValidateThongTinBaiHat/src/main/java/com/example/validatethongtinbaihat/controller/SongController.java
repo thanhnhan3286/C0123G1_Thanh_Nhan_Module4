@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -41,6 +42,27 @@ public class SongController {
         } else {
             Song song = new Song();
             BeanUtils.copyProperties(songDTO, song);
+            songService.save(song);
+            return "redirect:/";
+        }
+    }
+
+    @GetMapping("/{id}/edit")
+    public String edit(Model model, @PathVariable int id) {
+        SongDTO songDTO = new SongDTO();
+        BeanUtils.copyProperties(songService.findById(id), songDTO);
+        model.addAttribute("songDTO", songDTO);
+        return "/edit";
+    }
+
+    @PostMapping("/edit")
+    public String editPost(@Validated @ModelAttribute("songDTO") SongDTO songDTO, BindingResult bindingResult) {
+        new SongDTO().validate(songDTO, bindingResult);
+        if(bindingResult.hasErrors()){
+            return "/edit";
+        }else {
+            Song song = new Song();
+            BeanUtils.copyProperties(songDTO,song);
             songService.save(song);
             return "redirect:/";
         }

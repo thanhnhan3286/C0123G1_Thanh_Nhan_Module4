@@ -47,7 +47,7 @@
             <div>
                 <a th:href="@{/}">
                     <button class="btn" style="border: 1px solid #DDDDDD; background-color: green; color: white">
-                        Back to product list
+                        Back to list
                     </button>
                 </a>
             </div>
@@ -59,22 +59,28 @@
 <div class="col-lg-6 col-sm-8 " id="edit">
     <form th:action="@{/edit}" method="post" class="text_left" th:object="${songDTO}">
         <div hidden class="form-outline mb-4">
-            <input th:value="*{id}" name="id" type="text" id="form6Example" class="form-control" required/>
+            <input th:value="*{id}" name="id" type="text" id="form6Example" class="form-control"/>
             <label class="form-label" for="form6Example">ID</label>
+
         </div>
         <div class="form-outline mb-4">
-            <input th:value="*{name}" name="name" type="text" id="form6Example3" class="form-control" required/>
-            <label class="form-label" for="form6Example3">Title</label>
-        </div>
+            <input th:value="*{name}" name="name" type="text" id="form6Example3" class="form-control"/>
+            <label class="form-label" for="form6Example3">Name</label>
+            <p style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p></div>
         <div class="form-outline mb-4">
-            <input th:value="*{author}" name="author" min="1" type="text" id="form6Example4" class="form-control"
-                   required/>
+            <input th:value="*{author}" name="author" min="1" type="text" id="form6Example4" class="form-control"/>
             <label class="form-label" for="form6Example4">Author</label>
+            <p style="color: red" th:if="${#fields.hasErrors('author')}" th:errors="*{author}"></p>
         </div>
         <div class="form-outline mb-4">
-            <input th:value="*{singer}" name="singer" min="1" type="text" id="form6Example1" class="form-control"
-                   required/>
-            <label class="form-label" for="form6Example1">Author</label>
+            <input th:value="*{singer}" name="singer"  type="text" id="form6Example1" class="form-control"/>
+            <label class="form-label" for="form6Example1">Singer</label>
+            <p style="color: red" th:if="${#fields.hasErrors('singer')}" th:errors="*{singer}"></p>
+        </div>
+        <div class="form-outline mb-4">
+            <input th:value="*{type}" name="singer" min="1" type="text" id="form6Example2" class="form-control"/>
+            <label class="form-label" for="form6Example2">Type</label>
+            <p style="color: red" th:if="${#fields.hasErrors('type')}" th:errors="*{type}"></p>
         </div>
 <!--        <div class="form-outline mb-4">-->
 <!--            <select style="border: 1px solid #CCCCCC; text-align: center" name="category" id="form6Example5" th:field="*{category}" class="form-control">-->
@@ -86,11 +92,11 @@
 <!--            </select>-->
 <!--            <label class="form-label" for="form6Example5">Category</label>-->
 <!--        </div>-->
-        <div class="form-outline mb-4">
-            <textarea th:field="*{content}" name="content" class="form-control" id="form6Example7"
-                   rows="4" style="border: 1px solid #CCCCCC; border-radius: 5px"></textarea>
-            <label class="form-label" for="form6Example7">Contents</label>
-        </div>
+<!--        <div class="form-outline mb-4">-->
+<!--            <textarea th:field="*{content}" name="content" class="form-control" id="form6Example7"-->
+<!--                   rows="4" style="border: 1px solid #CCCCCC; border-radius: 5px"></textarea>-->
+<!--            <label class="form-label" for="form6Example7">Contents</label>-->
+<!--        </div>-->
         <button type="submit" class="btn btn-dark btn-block mb-4">Save</button>
     </form>
 </div>
