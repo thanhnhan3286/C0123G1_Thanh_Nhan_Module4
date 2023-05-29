@@ -5,6 +5,7 @@ import com.example.ungdungblog.model.Category;
 import com.example.ungdungblog.service.IBlogService;
 import com.example.ungdungblog.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +22,15 @@ public class BlogController {
     private ICategoryService categoryService;
 
     @GetMapping("/")
-    public String home(Model model) {
-        List<Blog> blogList = blogService.getAll();
+    public String home(Model model,@RequestParam(value = "page", defaultValue = "0")int page) {
+        Page<Blog> blogList = blogService.getAll(page);
+        model.addAttribute("blogList", blogList);
+        return "/list";
+    }
+    @PostMapping("/search")
+    public String search(@RequestParam String title, Model model,@RequestParam(value = "page", defaultValue = "0")int page) {
+        Page<Blog> blogList = blogService.findAllByTitleContaining(title, page);
+        model.addAttribute("title", title);
         model.addAttribute("blogList", blogList);
         return "/list";
     }
@@ -96,11 +104,4 @@ public class BlogController {
         return "/detail";
     }
 
-    @PostMapping("/search")
-    public String search(@RequestParam String title, Model model) {
-        List<Blog> blogList = blogService.findAllByTitleContaining(title);
-        model.addAttribute("title", title);
-        model.addAttribute("blogList", blogList);
-        return "/list";
-    }
 }

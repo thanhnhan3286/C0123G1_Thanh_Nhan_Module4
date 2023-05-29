@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3da493f-fbeb-48ef-adfa-d60ccc4f1097" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/repository/ICategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/service/ICategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/service/impl/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/resources/templates/createCategory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/resources/templates/editCategory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/resources/templates/listCategory.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss1-Spring Overview/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss1-Spring Overview/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/model/Blog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/repository/IBlogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/service/IBlogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/service/impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/java/com/example/ungdungblog/service/impl/BlogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/resources/templates/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/resources/templates/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/resources/templates/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss6-JPA/UngDungBlog/src/main/resources/templates/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -4,6 +4,9 @@ import com.example.ungdungblog.model.Blog;
 import com.example.ungdungblog.repository.IBlogRepository;
 import com.example.ungdungblog.service.IBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,9 +15,13 @@ import java.util.List;
 public class BlogServiceImpl implements IBlogService {
     @Autowired
     private IBlogRepository blogRepository;
+//    @Override
+//    public List<Blog> getAll() {
+//        return blogRepository.findAll();
+//    }
     @Override
-    public List<Blog> getAll() {
-        return blogRepository.findAllByStatusIsFalse();
+    public Page<Blog> getAll(int page){
+        return blogRepository.findAllByStatusIsFalse(PageRequest.of(page,4));
     }
 
     @Override
@@ -33,7 +40,7 @@ public class BlogServiceImpl implements IBlogService {
     }
 
     @Override
-    public List<Blog> findAllByTitleContaining(String title) {
-        return blogRepository.findAllByTitleContaining(title);
+    public Page<Blog> findAllByTitleContaining(String title, int page) {
+        return blogRepository.findAllByTitleContainingAndStatusIsFalse(title, PageRequest.of(page,4));
     }
 }

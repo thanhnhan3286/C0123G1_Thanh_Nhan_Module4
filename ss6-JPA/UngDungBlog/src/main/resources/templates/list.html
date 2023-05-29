@@ -63,7 +63,7 @@
             <tbody>
             <tr th:each="row,rowStat : ${blogList}">
                 <td th:text="${rowStat.count}"></td>
-                <td th:text="${row.id}"></td>
+                <td th:text="${row.getId()}"></td>
                 <td th:text="${row.title}"></td>
                 <td th:text="${row.author}"></td>
                 <td th:text="${row.category.name}"></td>
@@ -91,6 +91,14 @@
             </tbody>
         </table>
     </div>
+<div>
+    <a th:href="@{/(page = ${blogList.number - 1})}" th:if="${blogList.hasPrevious()}"> <span>Before</span> </a>
+    <span th:each="pageNo : ${#numbers.sequence(0,blogList.getTotalPages()-1)}">
+            <a th:text="${pageNo}" th:href="@{/(page=${pageNo})}" class="btn"
+               style="height: 35px;width: 40px;border: 1px solid black;color: black;background-color: white"></a>
+        </span>
+    <a th:href="@{/(page = ${blogList.number +1})}" th:if="${blogList.hasNext()}" > <span>Next</span> </a>
+</div>
 <!--</div>-->
 <!--<div class="col-sm-2"></div>-->
 <footer th:replace="/layout :: footer"></footer>
