@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Borrow</title>
+</head>
+<body>
+<div style="margin: 7% auto; text-align: center">
+    <h1 style="color:dodgerblue;">Mã mượn sách của bạn là: </h1>
+    <h1 th:text="${codeBorrow}"></h1>
+    <button style="width: 90px;height: 40px; color:green;font-size: 16px"><a th:href="@{/}">OK</a></button>
+</div>
+
+</body>
+</html>
