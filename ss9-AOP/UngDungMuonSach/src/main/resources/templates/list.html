@@ -20,9 +20,9 @@
         </div>
         <div style="display: flex">
             <form class="d-flex" th:action="@{/search}" method="post">
-                <input style="width: 12vw" class="form-control me-2" type="search" name="title" th:value="${title}"
-                       placeholder="Title Blog" aria-label="Search">
-                <button class="btn btn-primary" type="submit" style=" color: white">Search</button>
+                <input style="width: 12vw" class="form-control me-2" type="search" name="codeBorrow" th:value="${codeBorrow}"
+                       placeholder="Borrow Book Code" aria-label="Search">
+                <button class="btn btn-primary" type="submit" style=" color: white">Give Back Book</button>
             </form>
             <a th:href="@{/}">
                 <button class="btn" style="border: 1px solid #DDDDDD; background-color: green; color: white">

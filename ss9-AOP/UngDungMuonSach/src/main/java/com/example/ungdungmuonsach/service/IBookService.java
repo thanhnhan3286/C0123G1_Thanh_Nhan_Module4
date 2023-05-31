@@ -13,5 +13,7 @@ public interface IBookService {
 
 //    void setQuantity(int id);
 
-    void saveBook(Book book);
+    void saveBookBorrow(Book book);
+
+    void saveBookReturn(Book book);
 }

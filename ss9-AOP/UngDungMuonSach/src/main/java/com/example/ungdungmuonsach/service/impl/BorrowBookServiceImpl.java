@@ -21,4 +21,20 @@ public class BorrowBookServiceImpl implements IBorrowBookService {
     public void save(BorrowBook borrowBook) {
         this.borrowBookRepository.save(borrowBook);
     }
+
+    @Override
+    public boolean findAllByCodeBorrow(String codeBorrow) {
+        List<BorrowBook> borrowBooks = borrowBookRepository.findAllByCodeBorrow(codeBorrow);
+        return borrowBooks.size() == 1;
+    }
+
+    @Override
+    public BorrowBook findByCodeBorrow(String codeBorrow) {
+        return borrowBookRepository.findByCodeBorrow(codeBorrow);
+    }
+
+    @Override
+    public void delete(BorrowBook borrowBook) {
+        this.borrowBookRepository.delete(borrowBook);
+    }
 }
