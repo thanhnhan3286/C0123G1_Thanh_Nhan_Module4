@@ -11,5 +11,7 @@ public interface IBookService {
 
     Book findById(int id);
 
-    void setQuantity(int id);
+//    void setQuantity(int id);
+
+    void saveBook(Book book);
 }

@@ -32,7 +32,14 @@ public class BookServiceImpl implements IBookService {
     }
 
     @Override
-    public void setQuantity(int id) {
-        this.bookRepository.setQuantity(id);
+    public void saveBook(Book book) {
+        int quantity = book.getQuantity() - 1;
+        book.setQuantity(quantity);
+        bookRepository.save(book);
     }
+
+//    @Override
+//    public void setQuantity(int id) {
+//        this.bookRepository.setQuantity(id);
+//    }
 }

@@ -34,10 +34,10 @@ public class BorrowBookController {
             String codeBorrow = bookService.ramdomCodeBorrow();
             BorrowBook borrowBook = new BorrowBook(bookService.findById(id),codeBorrow);
             this.borrowBookService.save(borrowBook);
-            this.bookService.setQuantity(id);
+            this.bookService.saveBook(bookService.findById(id));
             model.addAttribute("codeBorrow",codeBorrow);
-            model.addAttribute("id",id);
-            model.addAttribute("quantity",quantity);
+//            model.addAttribute("id",id);
+//            model.addAttribute("quantity",quantity);
             return "/codeBorrow";
         }
     }
