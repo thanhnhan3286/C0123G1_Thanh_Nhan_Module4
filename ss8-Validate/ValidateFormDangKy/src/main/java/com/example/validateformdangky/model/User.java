@@ -9,8 +9,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "user")
-//@EntityListeners(AuditingEntityListener.class)
-public class User {
+    public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

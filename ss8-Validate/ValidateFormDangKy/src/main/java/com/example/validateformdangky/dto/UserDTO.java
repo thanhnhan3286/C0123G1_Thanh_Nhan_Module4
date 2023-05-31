@@ -14,9 +14,9 @@ import java.util.Date;
 
 public class UserDTO implements Validator {
     private Integer id;
-
+    @NotBlank(message = "Không đúng định dạng")
+    @Size(min = 1, max = 45, message = "Phải ít hơn 45 ký tự")
     private String firstName;
-
     @NotBlank(message = "Không đúng định dạng")
     @Size(min = 1, max = 45, message = "Phải ít hơn 45 ký tự")
     private String lastName;
@@ -102,8 +102,8 @@ public class UserDTO implements Validator {
             LocalDate age = LocalDate.parse(userDTO.birthDay, formatter);
             LocalDate now = LocalDate.now();
             int yearOld = Period.between(age, now).getYears();
-            if (yearOld < 18) {
-                errors.rejectValue("birthDay", "","Tuổi tối thiểu là 18 vui lòng kiểm tra lại");
+            if (yearOld < 18 || yearOld > 89) {
+                errors.rejectValue("birthDay", "","Tuổi tối thiểu là 18, tối đa là 89 vui lòng kiểm tra lại");
             }
         } catch (DateTimeParseException e) {
             errors.rejectValue("birthDay", "","Định dạng ngày không hợp lệ, vui lòng kiểm tra lại");

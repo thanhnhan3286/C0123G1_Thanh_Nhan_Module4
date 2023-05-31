@@ -1,15 +1,11 @@
 package com.example.validatethongtinbaihat.dto;
 
-import org.springframework.validation.Errors;
-import org.springframework.validation.Validator;
-
-import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 
-public class SongDTO implements Validator {
+public class SongDTO {
     private Integer id;
     @NotBlank(message = "Tên bài hát không được để trống")
     @Size(max = 800,message = "Tên bài hát không được quá 800 kí tự")
@@ -83,15 +79,5 @@ public class SongDTO implements Validator {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return false;
-    }
-
-    @Override
-    public void validate(Object target, Errors errors) {
-
     }
 }
