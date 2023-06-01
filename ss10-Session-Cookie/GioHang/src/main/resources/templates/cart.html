@@ -173,9 +173,9 @@
                                 <td  th:text="${product.getKey().price}">
                                 </td>
                                 <td>
-                                    <a th:href="@{/remove/{id}(id = ${product.getKey().id})}" th:text="'-'"></a>
+                                    <a th:href="@{/{id}/removeToCart(id = ${product.getKey().id})}" th:text="'-'"></a>
                                     <span th:text="${product.getValue()}"></span>
-                                    <a th:href="@{/add/{id}(id = ${product.getKey().id})}" th:text="'+'"></a>
+                                    <a th:href="@{/{id}/addToCart(id = ${product.getKey().id})}" th:text="'+'"></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -185,7 +185,7 @@
         </div>
     </div>
     <div class="row d-flex align-items-center justify-content-end px-sm-3 pt-3 px-1">
-        <h3>Total: <span th:field="${total}" class="h3"></span> </h3>
+        <h3>Total: <span th:text="${total}"></span> </h3>
     </div>
 </div>
 </body>
