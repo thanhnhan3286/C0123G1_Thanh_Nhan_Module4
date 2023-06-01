@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- Font Awesome -->
+<link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+        rel="stylesheet"
+/>
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Slab&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to top, #fff, #37fc0f 150%) no-repeat;
+        }
+
+        .wrapper {
+            box-shadow: 10px 10px 80px #c9fab2;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        select {
+            border-radius: 20px;
+            outline: none;
+            border: 1px solid #ddd;
+            color: #555;
+        }
+
+        img {
+            object-fit: contain;
+            width: 150px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p.h4 {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .rating {
+            font-size: 0.7rem;
+        }
+
+        .fa-star, .reviews {
+            color: #daa520;
+        }
+
+        div.h4 {
+            font-size: 1.8rem;
+            color: #d4a838;
+            font-family: 'Lora', serif;
+            margin: 0;
+        }
+
+        .btn {
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 8px 20px;
+        }
+
+        .card {
+            position: relative;
+        }
+
+        .card:hover {
+            border: 1px solid #000;
+            box-shadow: 3px 3px 30px rgb(166, 255, 144);
+        }
+
+        .red {
+            background-color: #e03e3e;
+            position: absolute;
+            color: #fff;
+            border-radius: 5px;
+            right: 5px;
+            top: 5px;
+            font-size: 0.9rem;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        @media (max-width: 1000px) {
+            .wrapper {
+                margin: 20px 10px;
+            }
+
+            p.h4 {
+                font-size: 1.35rem;
+                padding-top: 10px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .wrapper {
+                max-width: 100%;
+                margin: 20px auto;
+            }
+        }
+
+        @media (max-width: 424px) {
+            .wrapper {
+                width: 100%;
+                margin: auto;
+            }
+
+            div.text-muted {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper rounded bg-white" style="margin-top: 7%">
+    <div style="text-align: center;color: black"> <h2>Shopping Cart</h2> </div>
+    <div class="d-flex align-items-center justify-content-end px-sm-3 pt-3 px-1">
+        <a th:href="@{/}">
+            <button class="btn" style="border: 1px solid #DDDDDD; background-color: green; color: white">
+                Back To List Product
+            </button>
+        </a>
+    </div>
+    <hr>
+    <div class="row px-sm-2 px-0 pt-3">
+        <div  th:object="${cart}">
+            <div class="container">
+                <div class="table-wrap">
+                    <table class="table table-responsive table-borderless">
+                        <thead>
+                        <th>ID</th>
+                        <th>Picture</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        </thead>
+                        <tbody >
+                            <tr th:each="product, row : ${cart.entrySet()}"
+                                class="align-middle alert border-bottom" role="alert">
+                                <td th:text="${product.getKey().id}">
+                                </td>
+                                <td class="text-center">
+                                    <img class="pic"
+                                         th:src="${product.getKey().image}"
+                                         alt="">
+                                </td>
+                                <td th:text="${product.getKey().name}">
+                                </td>
+                                <td  th:text="${product.getKey().price}">
+                                </td>
+                                <td>
+                                    <a th:href="@{/remove/{id}(id = ${product.getKey().id})}" th:text="'-'"></a>
+                                    <span th:text="${product.getValue()}"></span>
+                                    <a th:href="@{/add/{id}(id = ${product.getKey().id})}" th:text="'+'"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex align-items-center justify-content-end px-sm-3 pt-3 px-1">
+        <h3>Total: <span th:field="${total}" class="h3"></span> </h3>
+    </div>
+</div>
+</body>
+</html>
