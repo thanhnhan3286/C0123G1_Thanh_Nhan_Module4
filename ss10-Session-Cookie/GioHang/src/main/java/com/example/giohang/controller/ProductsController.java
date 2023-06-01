@@ -40,37 +40,20 @@ public class ProductsController {
     public String addToCart(@PathVariable("id") Integer id, RedirectAttributes redirectAttributes,
                             @ModelAttribute("cart") Map<Products, Integer> productList) {
         Products products = productsService.findById(id);
-        Integer quantity;
-        if (!cartService.checkExist(products, productList)) {
-            productList.put(products, 1);
-        } else {
-            Map.Entry<Products,Integer> m = cartService.productIntegerEntry(products,productList);
-            quantity = m.getValue() + 1;
-            productList.replace(m.getKey(),quantity);
-        }
+        this.cartService.addProduct(products,productList);
         return "redirect:/cart";
     }
-    @GetMapping("/{id}/removeToCart")
+    @GetMapping("/{id}/remove")
     public String removeToCart(@PathVariable("id") Integer id, RedirectAttributes redirectAttributes,
                                @ModelAttribute("cart") Map<Products, Integer> productList) {
         Products products = productsService.findById(id);
-        Integer quantity;
-        if (!cartService.checkExist(products, productList)) {
-            productList.put(products, 1);
-        } else {
-            Map.Entry<Products,Integer> m = cartService.productIntegerEntry(products,productList);
-            quantity = m.getValue() - 1;
-            productList.replace(m.getKey(),quantity);
-            if (m.getValue()==0){
-                productList.remove(m.getKey());
-            }
-        }
+        this.cartService.removeProduct(products,productList);
         return "redirect:/cart";
     }
     @GetMapping("/cart")
     public String carts(@SessionAttribute("cart") Map<Products,Integer> list , Model model){
         model.addAttribute("cart",list);
-        double total = cartService.getTotal(list);
+        double total = cartService.countTotalPayment(list);
         model.addAttribute("total", total);
         return "/cart";
     }

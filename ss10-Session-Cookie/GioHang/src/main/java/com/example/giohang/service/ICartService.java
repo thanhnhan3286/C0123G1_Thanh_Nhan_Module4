@@ -5,9 +5,13 @@ import com.example.giohang.model.Products;
 import java.util.Map;
 
 public interface ICartService {
-    boolean checkExist(Products flower, Map<Products, Integer> productList);
+    boolean checkItemInCart(Products products, Map<Products, Integer> productList);
 
-    Map.Entry<Products, Integer> productIntegerEntry(Products flower, Map<Products, Integer> productList);
+    Map.Entry<Products, Integer> productIntegerEntry(Products products, Map<Products, Integer> productList);
 
-    double getTotal(Map<Products, Integer> list);
+    double countTotalPayment(Map<Products, Integer> list);
+
+    void addProduct(Products products, Map<Products, Integer> productList);
+
+    void removeProduct(Products products, Map<Products, Integer> productList);
 }
