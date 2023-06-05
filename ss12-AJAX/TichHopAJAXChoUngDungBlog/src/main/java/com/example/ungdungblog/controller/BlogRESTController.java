@@ -30,4 +30,5 @@ public class BlogRESTController {
     public ResponseEntity<Blog> getBlog(@PathVariable("id") Integer id){
         return new ResponseEntity<>(blogService.findById(id),HttpStatus.OK);
     }
+    @GetMapping("/")
 }
