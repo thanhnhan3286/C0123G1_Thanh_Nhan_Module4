@@ -16,7 +16,7 @@ import java.util.List;
 public class CategoryRESTController {
     @Autowired
     private ICategoryService categoryService;
-    @GetMapping("/category")
+    @GetMapping("/categoryList")
     public ResponseEntity<List<Category>> getListCategory(){
         return new ResponseEntity<>(categoryService.findAll(), HttpStatus.OK);
     }

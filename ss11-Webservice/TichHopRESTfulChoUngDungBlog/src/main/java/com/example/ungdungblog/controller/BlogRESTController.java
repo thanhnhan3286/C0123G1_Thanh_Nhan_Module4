@@ -18,7 +18,7 @@ import java.util.List;
 public class BlogRESTController {
     @Autowired
     private IBlogService blogService;
-    @GetMapping("/blog")
+    @GetMapping("/blogList")
     public ResponseEntity<List<Blog>> getListBlog(){
         return new ResponseEntity<>(blogService.getAll(),HttpStatus.OK);
     }

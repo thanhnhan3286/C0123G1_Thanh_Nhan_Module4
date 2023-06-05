@@ -19,4 +19,6 @@ public interface IBlogService {
     Page<Blog> findAllByTitleContaining(String title, int page);
 
     List<Blog> findAllByIdCategory(Integer id);
+
+    List<Blog> findAllByTitle(String title);
 }

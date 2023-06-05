@@ -26,6 +26,8 @@ public interface IBlogRepository extends JpaRepository<Blog, Integer> {
 
     @Query(value = "SELECT * FROM blogers WHERE category_id = :id AND status = 0", nativeQuery = true)
     List<Blog> findAllByIdCategory(Integer id);
+    @Query(value = "SELECT * FROM blogers WHERE title LIKE CONCAT('%',:title,'%') ", nativeQuery = true)
+    List<Blog> findAllByTitle(@Param("title") String title);
 
 
 //    @Query(value = "INSERT INTO blogers (author, content, title) VALUES (?, ?, ?);", nativeQuery = true)

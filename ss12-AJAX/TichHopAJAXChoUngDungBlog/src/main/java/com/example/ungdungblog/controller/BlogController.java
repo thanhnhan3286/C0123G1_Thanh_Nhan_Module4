@@ -25,7 +25,7 @@ public class BlogController {
     public String home(Model model,@RequestParam(value = "page", defaultValue = "0")int page) {
         Page<Blog> blogList = blogService.getAll(page);
         model.addAttribute("blogList", blogList);
-        return "/list";
+        return "/listBlog";
     }
     @PostMapping("/search")
     public String search(@RequestParam String title, Model model,@RequestParam(value = "page", defaultValue = "0")int page) {
