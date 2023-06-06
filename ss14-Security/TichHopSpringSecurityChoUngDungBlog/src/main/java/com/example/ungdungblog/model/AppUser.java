@@ -5,13 +5,13 @@ import javax.persistence.*;
 @Entity
 @Table(name = "app_user", //
         uniqueConstraints = { //
-                @UniqueConstraint(name = "APP_USER_UK", columnNames = "user_name") })
+                @UniqueConstraint(name = "APP_USER_UK", columnNames = "user_name")})
 public class AppUser {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id", nullable = false)
-    private Long userId;
+    private Integer userId;
 
     @Column(name = "user_name", length = 36, nullable = false)
     private String userName;
@@ -22,11 +22,11 @@ public class AppUser {
     @Column(name = "enabled", length = 1, nullable = false)
     private boolean enabled;
 
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

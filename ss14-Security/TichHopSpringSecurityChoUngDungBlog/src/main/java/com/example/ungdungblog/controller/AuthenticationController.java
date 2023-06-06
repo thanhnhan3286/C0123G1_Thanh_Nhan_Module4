@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class AuthenticationController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginPage(Model model) {
+    public String loginPage() {
         return "loginPage";
     }
 

@@ -72,7 +72,7 @@
 <h1 style="text-align: center;margin-top:50px ">ADD NEW BLOG</h1>
 <div class="col-lg-2 col-sm-1"></div>
 <div class="col-lg-8 col-sm-10 " id="add">
-    <form action="/create" method="post" class="text_left" th:object="${blog}">
+    <form th:action="@{/create}" method="post" class="text_left" th:object="${blog}">
         <div class="form-outline mb-4">
             <input name="title" type="text" id="form6Example3" class="form-control" required th:field="*{title}"/>
             <label class="form-label" for="form6Example3">Title</label>

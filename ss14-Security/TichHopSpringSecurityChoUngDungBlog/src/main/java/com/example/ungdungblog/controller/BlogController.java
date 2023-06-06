@@ -20,10 +20,15 @@ public class BlogController {
     private IBlogService blogService;
     @Autowired
     private ICategoryService categoryService;
+    @GetMapping("/listBlog")
+    public String returnLogin(){
+        return "/listBlog";
+    }
     @GetMapping("")
     public String returnList(){
         return "/listBlog";
     }
+
 
 //    @GetMapping("/")
 //    public String home(Model model,@RequestParam(value = "page", defaultValue = "0")int page) {
@@ -62,7 +67,7 @@ public class BlogController {
     @PostMapping("/create")
     public String createPost(@ModelAttribute("blog") Blog blog) {
         blogService.save(blog);
-        return "redirect:/";
+        return "/listBlog";
     }
 
     @PostMapping("/createCategory")
@@ -84,7 +89,7 @@ public class BlogController {
     @PostMapping("/edit")
     public String editPost(Blog blog) {
         blogService.save(blog);
-        return "redirect:/";
+        return "/listBlog";
     }
     @PostMapping("/editCategory")
     public String editCategoryPost(Category category){
@@ -94,7 +99,7 @@ public class BlogController {
     @GetMapping("/delete")
     public String delete(@RequestParam int deleteId) {
         blogService.delete(deleteId);
-        return "redirect:/";
+        return "/listBlog";
     }
     @GetMapping("/deleteCategory")
     public String deleteCategory(@RequestParam int deleteId) {
