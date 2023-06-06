@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/login.css">
+</head>
+<body>
+
+<h1>Login</h1>
+
+<!-- /login?error=true -->
+<div th:if="${#request.getParameter('error') == 'true'}"
+     style="color:red;margin:10px 0px;">
+    Login Failed!!!<br />
+    Reason :
+    <span th:if="${#session!= null and #session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION') != null}"
+          th:utext="${#session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION').message}">
+                Static summary
+         </span>
+
+</div>
+
+<h3>Enter user name and password:</h3>
+<form name='f' th:action="@{/j_spring_security}" method='POST'>
+    <table>
+        <tr>
+            <td>User:</td>
+            <td><input type='text' name='username' value=''></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type='password' name='password' /></td>
+        </tr>
+        <tr>
+            <td>Remember Me?</td>
+            <td><input type="checkbox" name="remember-me" /></td>
+        </tr>
+        <tr>
+            <td><input name="submit" type="submit" value="submit" /></td>
+        </tr>
+    </table>
+</form>
+<div id="container">
+    <div id="formcontainer">
+        <img id="img1" src="https://images.pexels.com/photos/414645/pexels-photo-414645.jpeg?cs=srgb&dl=background-beverage-brown-414645.jpg&fm=jpg">
+        <a href="#"><img id="cross" src="https://image.flaticon.com/icons/svg/148/148766.svg"></a>
+        <p id="text">Login to your Account</p>
+        <input id="email" type="email" type="tel" placeholder="Email / Phone">
+        <input id="password" type="password" placeholder="Password">
+        <input id="check" type="checkbox">
+        <p id="text1">Remember Me</p>
+        <a id="forget" href="#">Forget Password ?</a>
+        <button id="login" type="submit">Log In</button>
+        <hr id="hrline1">
+        <p id="text2">or login with</p>
+        <hr id="hrline2">
+        <button id="facebook"><img id="facebook1" src="https://image.flaticon.com/icons/svg/174/174848.svg">Facebook</button>
+        <button id="google"><img id="google1" src="https://image.flaticon.com/icons/svg/281/281764.svg">Google</button>
+        <p id="text3">Not a Member?</p>
+        <a id="signup" href="#">Signup Now</a>
+    </div>
+</div>
+
+</body>
+</html>

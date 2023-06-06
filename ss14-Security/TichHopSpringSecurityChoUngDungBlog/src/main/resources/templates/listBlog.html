@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+    <meta charset="UTF-8">
+    <title>List Blog</title>
+
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<body>
+<nav class="navbar navbar-light bg-light" style="position: sticky; top:0;left: 0;right: 0">
+    <div class="container-fluid">
+        <div style="display: flex; margin: 8px;position: relative">
+            <div>
+                <a th:href="@{/create}">
+                    <button class="btn" style="border: 1px solid #DDDDDD; background-color: green; color: white">
+                        Add New Blog
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a th:href="@{/categoryList}">
+                    <button class="btn" style="border: 1px solid #DDDDDD; background-color: green; color: white">
+                        List Category
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div style="display: flex">
+            <!--            <form class="d-flex" th:action="@{/api/blog/search}" method="post">-->
+            <input style="width: 12vw" class="form-control me-2" type="search" id="titleSearch" name="title"
+                   placeholder="Title Blog" aria-label="Search">
+            <button class="btn btn-primary"
+                    onclick="searchBlogByTitle()" style=" color: white">Search
+            </button>
+            <!--            </form>-->
+            <a th:href="@{/}">
+                <button class="btn" style="border: 1px solid #DDDDDD; background-color: green; color: white">
+                    Reset
+                </button>
+            </a>
+        </div>
+    </div>
+</nav>
+<h3 style="text-align: center">Blog List</h3>
+<div style="margin: 0 auto; width: 90%; height: auto">
+    <table id="table-blog" class="table table-striped">
+        <!--        <thead>-->
+        <tr>
+            <th scope="col">Code Blog</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Category</th>
+            <th scope="col">Create Time</th>
+        </tr>
+        <!--        </thead>-->
+        <!--        <tbody >-->
+
+        <!--        </tbody>-->
+    </table>
+    <button class="btn" onclick="loadMore()" style="border: 1px solid #DDDDDD; background-color: green; color: white">
+        Load more
+    </button>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            headers: {
+                'accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            url: 'http://localhost:8080/api/blog/blogList',
+            type: "GET",
+            success: function (data) {
+                console.log(data)
+                let table = document.getElementById("table-blog");
+                for (let i = 0; i < data.content.length; i++) {
+                    let row = table.insertRow(i + 1);
+                    let codeBlog = row.insertCell(0);
+                    let title = row.insertCell(1);
+                    let author = row.insertCell(2);
+                    let category = row.insertCell(3);
+                    let createTime = row.insertCell(4);
+                    codeBlog.innerHTML = data.content[i].id;
+                    title.innerHTML = data.content[i].title;
+                    author.innerHTML = data.content[i].author;
+                    category.innerHTML = data.content[i].category.name;
+                    createTime.innerHTML = data.content[i].createTime;
+                }
+            },
+            error: function (data) {
+            }
+        })
+    })
+
+    function searchBlogByTitle() {
+        let title = document.getElementById('titleSearch').value;
+        $.ajax({
+            headers: {
+                'accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            url: 'http://localhost:8080/api/blog/search?title=' + encodeURIComponent(title),
+            type: "GET",
+            success: function (data) {
+                console.log(data)
+                let table = document.getElementById("table-blog");
+                while (table.rows.length > 1) {
+                    table.deleteRow(1);
+                }
+                for (let i = 0; i < data.length; i++) {
+                    let row = table.insertRow(i + 1);
+                    let codeBlog = row.insertCell(0);
+                    let title = row.insertCell(1);
+                    let author = row.insertCell(2);
+                    let category = row.insertCell(3);
+                    let createTime = row.insertCell(4);
+                    codeBlog.innerHTML = data[i].id;
+                    title.innerHTML = data[i].title;
+                    author.innerHTML = data[i].author;
+                    category.innerHTML = data[i].category.name;
+                    createTime.innerHTML = data[i].createTime;
+                }
+            },
+            error: function (data) {
+                console.log(data)
+            }
+        })
+    }
+
+    let page = 1;
+
+    function loadMore() {
+        $.ajax({
+            headers: {
+                'accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            url: 'http://localhost:8080/api/blog/loadMore?page=' + decodeURIComponent(page++),
+            type: 'GET',
+            success: function (data) {
+                console.log(data)
+                let table = document.getElementById("table-blog");
+                let j = table.rows.length;
+                for (let i = 0; i < data.content.length; i++) {
+                    let row = table.insertRow(j);
+                    let codeBlog = row.insertCell(0);
+                    let title = row.insertCell(1);
+                    let author = row.insertCell(2);
+                    let category = row.insertCell(3);
+                    let createTime = row.insertCell(4);
+                    codeBlog.innerHTML = data.content[data.content.length - i - 1].id;
+                    title.innerHTML = data.content[data.content.length - i - 1].title;
+                    author.innerHTML = data.content[data.content.length - i - 1].author;
+                    category.innerHTML = data.content[data.content.length - i - 1].category.name;
+                    createTime.innerHTML = data.content[data.content.length - i - 1].createTime;
+                }
+            },
+            error: function (data) {
+                console.log(data)
+            }
+        })
+    }
+</script>
+</html>
