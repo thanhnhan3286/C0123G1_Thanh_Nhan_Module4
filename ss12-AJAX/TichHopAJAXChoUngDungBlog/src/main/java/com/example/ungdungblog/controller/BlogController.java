@@ -20,13 +20,17 @@ public class BlogController {
     private IBlogService blogService;
     @Autowired
     private ICategoryService categoryService;
-
-    @GetMapping("/")
-    public String home(Model model,@RequestParam(value = "page", defaultValue = "0")int page) {
-        Page<Blog> blogList = blogService.getAll(page);
-        model.addAttribute("blogList", blogList);
+    @GetMapping("")
+    public String returnList(){
         return "/listBlog";
     }
+
+//    @GetMapping("/")
+//    public String home(Model model,@RequestParam(value = "page", defaultValue = "0")int page) {
+//        Page<Blog> blogList = blogService.getAll(page);
+//        model.addAttribute("blogList", blogList);
+//        return "/listBlog";
+//    }
     @PostMapping("/search")
     public String search(@RequestParam String title, Model model,@RequestParam(value = "page", defaultValue = "0")int page) {
         Page<Blog> blogList = blogService.findAllByTitleContaining(title, page);
